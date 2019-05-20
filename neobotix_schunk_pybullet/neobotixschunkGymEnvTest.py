@@ -29,6 +29,7 @@ def main():
     actionIds.append(environment._p.addUserDebugParameter("arm_5_joint", -dv, dv, 0))
     actionIds.append(environment._p.addUserDebugParameter("arm_6_joint", -dv, dv, 0))
     actionIds.append(environment._p.addUserDebugParameter("arm_7_joint", -dv, dv, 0))
+    controlId = environment._p.addUserDebugParameter("stop_or_go",0,1,0)
 
     done = 0
 
@@ -38,18 +39,22 @@ def main():
     while not done:
         #time.sleep(1)
         #environment.reset()
-        action = []
-        for actionId in actionIds:
-            action.append(environment._p.readUserDebugParameter(actionId))
-        state, reward, done, info = environment.step(action)
-        #state, reward, done, info = environment.step(environment._sample_action())
-        # print('r', reward)
-        #print('step', state, reward, done, info)
-        obs = environment.getExtendedObservation()
-        # print(environment._p.getPhysicsEngineParameters)
-        # environment.render()
-        disc_total_rew += 1 * 0.99 ** t
-        t += 1
+        go = environment._p.readUserDebugParameter(controlId)
+        if go:
+            action = []
+            for actionId in actionIds:
+                action.append(environment._p.readUserDebugParameter(actionId))
+            state, reward, done, info = environment.step(action)
+            #state, reward, done, info = environment.step(environment._sample_action())
+            # print('r', reward)
+            #print('step', state, reward, done, info)
+            obs = environment.getExtendedObservation()
+            # print(environment._p.getPhysicsEngineParameters)
+            # environment.render()
+            disc_total_rew += 1 * 0.99 ** t
+            t += 1
+        else:
+            pass
     print(disc_total_rew, t)
 
 if __name__=="__main__":
