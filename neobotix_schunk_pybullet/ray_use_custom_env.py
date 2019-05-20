@@ -15,6 +15,6 @@ trainer = ppo.PPOTrainer(env="my_env")
 for i in range(1000):
     result = trainer.train()
     print(pretty_print(result))
-    if i % 100 == 0:
+    if i % 10 == 0:
         checkpoint = trainer.save()
         print("checkpoint saved at", checkpoint)
