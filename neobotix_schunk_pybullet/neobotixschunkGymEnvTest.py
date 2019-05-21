@@ -36,6 +36,7 @@ def main():
     t=0
     disc_total_rew=0
     #
+
     while not done:
         #time.sleep(1)
         #environment.reset()
@@ -54,7 +55,7 @@ def main():
             disc_total_rew += 1 * 0.99 ** t
             t += 1
         else:
-            pass
+            print("get in")
     print(disc_total_rew, t)
 
 if __name__=="__main__":
