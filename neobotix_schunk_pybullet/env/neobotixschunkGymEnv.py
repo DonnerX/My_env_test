@@ -362,6 +362,9 @@ class NeobotixSchunkGymEnv(gym.Env):
     def set_fps(self, fps=30):
         pyglet.clock.set_fps_limit(fps)
 
+    # def _get_uid_for_test(self):
+    #     return self._neobotixschunk.neobotixschunkUid
+
     if parse_version(gym.__version__) >= parse_version('0.9.6'):
         _render = render
         _reset = reset

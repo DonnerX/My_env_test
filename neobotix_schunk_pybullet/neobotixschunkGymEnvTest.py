@@ -31,15 +31,20 @@ def main():
     actionIds.append(environment._p.addUserDebugParameter("arm_7_joint", -dv, dv, 0))
     controlId = environment._p.addUserDebugParameter("stop_or_go",0,1,0)
 
+########init########
     done = 0
 
     t=0
     disc_total_rew=0
     #
+    #Uid = environment._get_uid_for_test()
+    state, reward, done = [0,0,0], 0, 0
 
+####################
     while not done:
         #time.sleep(1)
         #environment.reset()
+        TextId = environment._p.addUserDebugText("reward=%.2f,done=%s" % (reward, done), [0, 0, 1], [0, 0, 0])
         go = environment._p.readUserDebugParameter(controlId)
         if go:
             action = []
@@ -55,7 +60,8 @@ def main():
             disc_total_rew += 1 * 0.99 ** t
             t += 1
         else:
-            print("get in")
+            print(state)
+        environment._p.removeUserDebugItem(TextId)
     print(disc_total_rew, t)
 
 if __name__=="__main__":
