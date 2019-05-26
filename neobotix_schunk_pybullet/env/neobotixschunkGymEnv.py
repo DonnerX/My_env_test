@@ -219,9 +219,10 @@ class NeobotixSchunkGymEnv(gym.Env):
         self.r_penalty = 0
         for i in range(self._actionRepeat):
             self._neobotixschunk.applyAction(action_scaled)
-            for i in range(30):  #it takes time to do the action
-                p.stepSimulation()
-                time.sleep(1/240)
+            p.stepSimulation()
+            # for i in range(30):  #it takes time to do the action
+            #     p.stepSimulation()
+            #     time.sleep(1/240)
             done = self._termination()
             if done:
                 self._count_ep += 1
@@ -362,8 +363,9 @@ class NeobotixSchunkGymEnv(gym.Env):
     def set_fps(self, fps=30):
         pyglet.clock.set_fps_limit(fps)
 
-    # def _get_uid_for_test(self):
-    #     return self._neobotixschunk.neobotixschunkUid
+    def _get_uid_for_test(self):
+        return self._neobotixschunk.neobotixschunkUid
+
 
     if parse_version(gym.__version__) >= parse_version('0.9.6'):
         _render = render

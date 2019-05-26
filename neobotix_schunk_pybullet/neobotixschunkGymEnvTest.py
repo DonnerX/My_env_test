@@ -8,6 +8,8 @@ model modified by Y. Zhang and J. Su.
 import os
 import inspect
 import time
+import matplotlib.pyplot as plt
+import numpy as np
 
 currentdir = os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentframe())))
 parentdir = os.path.dirname(os.path.dirname(currentdir))
@@ -29,7 +31,9 @@ def main():
     actionIds.append(environment._p.addUserDebugParameter("arm_5_joint", -dv, dv, 0))
     actionIds.append(environment._p.addUserDebugParameter("arm_6_joint", -dv, dv, 0))
     actionIds.append(environment._p.addUserDebugParameter("arm_7_joint", -dv, dv, 0))
-    controlId = environment._p.addUserDebugParameter("stop_or_go",0,1,0)
+    goId = environment._p.addUserDebugParameter("stop_or_go",0,1,0)
+    quitId = environment._p.addUserDebugParameter("quit",0,1,0)
+
 
 ########init########
     done = 0
@@ -37,15 +41,20 @@ def main():
     t=0
     disc_total_rew=0
     #
-    #Uid = environment._get_uid_for_test()
+    Uid = environment._get_uid_for_test()
     state, reward, done = [0,0,0], 0, 0
-
+    pos_z = []
 ####################
     while not done:
         #time.sleep(1)
         #environment.reset()
-        TextId = environment._p.addUserDebugText("reward=%.2f,done=%s" % (reward, done), [0, 0, 1], [0, 0, 0])
-        go = environment._p.readUserDebugParameter(controlId)
+        TextId = environment._p.addUserDebugText("reward=%.2f,done=%s" % (reward, done), [0, 0, 1
+                                                                                          ], [0, 0, 0])
+        go = environment._p.readUserDebugParameter(goId)
+        q = environment._p.readUserDebugParameter(quitId)
+        if q>0:
+            environment._p.disconnect()
+            break
         if go:
             action = []
             for actionId in actionIds:
@@ -57,12 +66,21 @@ def main():
             obs = environment.getExtendedObservation()
             # print(environment._p.getPhysicsEngineParameters)
             # environment.render()
+            base_pos = environment._p.getBasePositionAndOrientation(Uid)[0]
+            pos_z.append(base_pos[2])
             disc_total_rew += 1 * 0.99 ** t
             t += 1
         else:
             print(state)
         environment._p.removeUserDebugItem(TextId)
     print(disc_total_rew, t)
+    pos_z = np.array(pos_z)
+    step = np.arange(0, len(pos_z), 1)
+    plt.plot(step, pos_z)
+    plt.show()
+
+
 
 if __name__=="__main__":
     main()
+

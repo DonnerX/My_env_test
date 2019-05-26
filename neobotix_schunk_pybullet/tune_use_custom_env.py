@@ -16,5 +16,6 @@ tune.run(
     checkpoint_freq=10,
     config={
         "env":"my_env",
+        
     }
 )
