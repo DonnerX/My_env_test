@@ -44,6 +44,15 @@ def main():
     Uid = environment._get_uid_for_test()
     state, reward, done = [0,0,0], 0, 0
     pos_z = []
+
+    num_joint = environment._p.getNumJoints(Uid)
+    for i in range(num_joint):
+        print(environment._p.getJointInfo(Uid,i))
+    environment._p.enableJointForceTorqueSensor(Uid,6,1)
+    joint_force_fx = []
+    joint_force_fy = []
+    joint_force_Mx = []
+    joint_force_My = []
 ####################
     while not done:
         #time.sleep(1)
@@ -68,15 +77,35 @@ def main():
             # environment.render()
             base_pos = environment._p.getBasePositionAndOrientation(Uid)[0]
             pos_z.append(base_pos[2])
+
+            joint_state = environment._p.getJointState(Uid, 6)
+            print(joint_state[2])
+            joint_force_fx.append(joint_state[2][0])
+            joint_force_fy.append(joint_state[2][1])
+            joint_force_Mx.append(joint_state[2][2])
+            joint_force_My.append(joint_state[2][3])
+
             disc_total_rew += 1 * 0.99 ** t
             t += 1
         else:
-            print(state)
+            pass
+            #print(state)
         environment._p.removeUserDebugItem(TextId)
     print(disc_total_rew, t)
     pos_z = np.array(pos_z)
+    joint_force_Mx = np.array(joint_force_Mx)
+    joint_force_My = np.array(joint_force_My)
+    joint_force_fx = np.array(joint_force_fx)
+    joint_force_fy = np.array(joint_force_fy)
     step = np.arange(0, len(pos_z), 1)
-    plt.plot(step, pos_z)
+    plt.subplot(121)
+    plt.plot(step, pos_z,'r')
+    plt.subplot(122)
+    #plt.plot(step, joint_force_Mx, 'g')
+    #plt.plot(step, joint_force_My, 'b')
+    plt.plot(step, joint_force_fx,label='fx')
+    plt.plot(step, joint_force_fy,label='fy')
+    plt.legend()
     plt.show()
 
 
