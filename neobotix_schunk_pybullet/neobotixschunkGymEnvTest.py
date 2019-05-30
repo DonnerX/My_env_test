@@ -51,8 +51,11 @@ def main():
     environment._p.enableJointForceTorqueSensor(Uid,6,1)
     joint_force_fx = []
     joint_force_fy = []
+    joint_force_fz = []
     joint_force_Mx = []
     joint_force_My = []
+    joint_motor_torque = []
+    joint6_vel = []
 ####################
     while not done:
         #time.sleep(1)
@@ -82,8 +85,11 @@ def main():
             print(joint_state[2])
             joint_force_fx.append(joint_state[2][0])
             joint_force_fy.append(joint_state[2][1])
-            joint_force_Mx.append(joint_state[2][2])
-            joint_force_My.append(joint_state[2][3])
+            #joint_force_fz.append(joint_state[2][2])
+            joint_force_Mx.append(joint_state[2][3])
+            joint_force_My.append(joint_state[2][4])
+            joint_motor_torque.append(joint_state[3])
+            joint6_vel.append(joint_state[1])
 
             disc_total_rew += 1 * 0.99 ** t
             t += 1
@@ -95,16 +101,26 @@ def main():
     pos_z = np.array(pos_z)
     joint_force_Mx = np.array(joint_force_Mx)
     joint_force_My = np.array(joint_force_My)
+    #joint_force_fz = np.array(joint_force_fz)
     joint_force_fx = np.array(joint_force_fx)
     joint_force_fy = np.array(joint_force_fy)
+    joint_motor_torque = np.array(joint_motor_torque)
+    joint6_vel = np.array(joint6_vel)
     step = np.arange(0, len(pos_z), 1)
-    plt.subplot(121)
+    plt.subplot(131)
     plt.plot(step, pos_z,'r')
-    plt.subplot(122)
+    plt.subplot(132)
     #plt.plot(step, joint_force_Mx, 'g')
     #plt.plot(step, joint_force_My, 'b')
     plt.plot(step, joint_force_fx,label='fx')
     plt.plot(step, joint_force_fy,label='fy')
+    plt.plot(step,joint_force_Mx,label='Mx')
+    plt.plot(step,joint_force_My,label='My')
+    plt.legend()
+    plt.subplot(133)
+    #plt.plot(step, joint_force_fz, label='fz')
+    plt.plot(step,joint_motor_torque,label='torque')
+    plt.plot(step,joint6_vel,label='joint6_vel')
     plt.legend()
     plt.show()
 

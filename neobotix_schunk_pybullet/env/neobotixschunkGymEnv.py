@@ -219,10 +219,12 @@ class NeobotixSchunkGymEnv(gym.Env):
         self.r_penalty = 0
         for i in range(self._actionRepeat):
             self._neobotixschunk.applyAction(action_scaled)
-            p.stepSimulation()
-            # for i in range(30):  #it takes time to do the action
-            #     p.stepSimulation()
-            #     time.sleep(1/240)
+            # p.stepSimulation()
+            joint_state = p.getJointState(self._neobotixschunk.neobotixschunkUid, 6)
+            for i in range(30):  #it takes time to do the action
+                p.stepSimulation()
+                print(joint_state[3])
+                time.sleep(1/240)
             done = self._termination()
             if done:
                 self._count_ep += 1
