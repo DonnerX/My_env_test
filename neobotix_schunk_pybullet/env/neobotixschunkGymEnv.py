@@ -219,12 +219,10 @@ class NeobotixSchunkGymEnv(gym.Env):
         self.r_penalty = 0
         for i in range(self._actionRepeat):
             self._neobotixschunk.applyAction(action_scaled)
-            # p.stepSimulation()
-            joint_state = p.getJointState(self._neobotixschunk.neobotixschunkUid, 6)
-            for i in range(30):  #it takes time to do the action
-                p.stepSimulation()
-                print(joint_state[3])
-                time.sleep(1/240)
+            p.stepSimulation()
+            # for i in range(30):  #it takes time to do the action
+            #     p.stepSimulation()
+            #     time.sleep(1/240)
             done = self._termination()
             if done:
                 self._count_ep += 1
@@ -342,9 +340,14 @@ class NeobotixSchunkGymEnv(gym.Env):
         else:
             penalty = 0 #self._envStepCounter/self._maxSteps/2
 
+        base_state = p.getBasePositionAndOrientation(self._neobotixschunk.neobotixschunkUid)
+        if base_state[0][2]>0.005:
+            penalty_z = -((1000*(base_state[0][2]))**2+500)
+        else:
+            penalty_z = 0
         if self._rewardtype == 'rdense':
             # reward = -(1-tau)*self.ee_dis - tau*self.base_dis + self.r_penalty -np.linalg.norm(self._actions)#+ penalty
-            reward = 1/(self.ee_dis**2) - self.ee_dis**2 + self.r_penalty
+            reward = 1/(self.ee_dis**2) - self.ee_dis**2 + self.r_penalty + penalty_z
             # reward = -reward
         elif self._rewardtype == 'rsparse':
             if delta_dis > 0:
