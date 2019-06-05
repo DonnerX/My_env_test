@@ -56,7 +56,7 @@ test_body = p.createMultiBody(baseMass=2,
 
 goId = p.addUserDebugParameter('go_or_stop',0,1,1)
 quitId = p.addUserDebugParameter('quit',0,1,0)
-velId = p.addUserDebugParameter('vel',0,5.2,0)
+velId = p.addUserDebugParameter('vel',0,5.2,5)
 
 num_joint = p.getNumJoints(test_body)
 for i in range(num_joint):

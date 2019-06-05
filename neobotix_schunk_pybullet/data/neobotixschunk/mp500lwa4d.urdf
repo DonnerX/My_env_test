@@ -238,7 +238,7 @@
     <parent link="arm_1_link"/>
     <child link="arm_2_link"/>
     <limit effort="216" lower="-2.12" upper="2.12" velocity="0.43633"/>
-    <dynamics damping="0.9" friction="0.08"/>
+    <dynamics damping="0" friction="0"/>
   </joint>
   <!-- arm_2_link -->
   <link name="arm_2_link">

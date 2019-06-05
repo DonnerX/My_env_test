@@ -83,7 +83,7 @@ class joint(object):
 
 
 def main():
-    environment = NeobotixSchunkGymEnv(renders=True, isDiscrete=False, maxSteps=1e5, action_dim=9, colliObj=1, wsboundary=1)
+    environment = NeobotixSchunkGymEnv(renders=True, isDiscrete=False, maxSteps=1e5, action_dim=9, colliObj=0, wsboundary=1)
     # environment._p.startStateLogging(environment._p.STATE_LOGGING_VIDEO_MP4, "TEST_GUI.mp4")
     dv = 1
     actionIds = []
@@ -118,7 +118,7 @@ def main():
         print(environment._p.getDynamicsInfo(Uid,i))
         link_state = environment._p.getLinkState(Uid,i)
         print(link_state[0])
-    joint_observ = joint(Uid,7)
+    joint_observ = joint(Uid,4)
 ####################
 
     while not done:
