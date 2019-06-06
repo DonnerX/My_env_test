@@ -148,9 +148,9 @@ class NeobotixSchunkGymEnv(gym.Env):
         d_space_scale = self.d_ws
         if self._count_ep:
             print('Scale here: ', self._count, self._count_ep, self._count/self._count_ep, d_space_scale, self._maxSteps)
-        xpos = np.random.uniform(-d_space_scale, d_space_scale) + 0.20
-        ypos = np.random.uniform(-d_space_scale, d_space_scale)
-        zpos = np.random.uniform(0.5, 1.5)
+        xpos = 0 #np.random.uniform(-d_space_scale, d_space_scale) + 0.20
+        ypos = 0 #np.random.uniform(-d_space_scale, d_space_scale)
+        zpos = 0 #np.random.uniform(0.5, 1.5)
         self.goal = np.array([xpos, ypos, zpos])
         p.resetBasePositionAndOrientation(self.goalUid, self.goal, self.origoal)
 
