@@ -61,6 +61,9 @@
       </geometry>
     </collision>
   </link>
+
+
+
   <!--+++++++++++++++wheel_left_link++++++++++++++++++-->
   <link name="wheel_left_link" type="wheel">
     <contact>
@@ -88,6 +91,9 @@
       </geometry>
     </collision>
   </link>
+
+
+
   <!--+++++++++++++++wheel_left_joint+++++++++++++++++-->
   <joint name="wheel_left_joint" type="continuous">
     <origin rpy="0 0 0" xyz="-0.155 0.255 0.125"/>
@@ -124,6 +130,9 @@
       </geometry>
     </collision>
   </link>
+
+
+
   <!--++++++++++++wheel_right_joint++++++++++++++-->
   <joint name="wheel_right_joint" type="continuous">
     <origin rpy="0 0 0" xyz="-0.155 -0.255 0.125"/>
@@ -133,6 +142,9 @@
     <parent link="base_link"/>
     <child link="wheel_right_link"/>
   </joint>
+
+
+
   <!--+++++++++++++++ wheel_hanger+++++++++++++++-->
   <link name="hanger">
     <inertial>
@@ -577,6 +589,20 @@
       </geometry>
     </collision>
   </link>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   <!-- Base Link -->
   <gazebo reference="base_footprint">
     <material value="Gazebo/Grey"/>

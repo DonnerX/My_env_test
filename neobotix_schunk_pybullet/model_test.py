@@ -78,7 +78,7 @@ neobotixschunkUid = p.loadURDF(
     os.path.join(parentdir, "My_env_test/neobotix_schunk_pybullet/data/neobotixschunk/mp500lwa4d_test.urdf"),
     useFixedBase=False, flags=p.URDF_USE_SELF_COLLISION)
 
-joint_observ = joint(neobotixschunkUid, 6)
+joint_observ = joint(neobotixschunkUid, 3)
 
 quitId = p.addUserDebugParameter("quit", 0, 1, 0)
 
