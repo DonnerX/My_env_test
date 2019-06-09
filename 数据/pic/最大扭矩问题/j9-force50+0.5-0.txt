@@ -1,0 +1,2 @@
+当减小position控制中目标角度与当前的插值时，pybullet采用的力矩会减小，
+因此如果每次action增加的position变化足够小的话，应该可以放宽maxforce的要求

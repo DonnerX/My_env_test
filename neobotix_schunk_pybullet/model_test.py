@@ -78,12 +78,13 @@ neobotixschunkUid = p.loadURDF(
     os.path.join(parentdir, "My_env_test/neobotix_schunk_pybullet/data/neobotixschunk/mp500lwa4d_test.urdf"),
     useFixedBase=False, flags=p.URDF_USE_SELF_COLLISION)
 
-joint_observ = joint(neobotixschunkUid, 17)
+joint_observ7 = joint(neobotixschunkUid, 7)
+joint_observ9 = joint(neobotixschunkUid, 9)
 
 quitId = p.addUserDebugParameter("quit", 0, 1, 0)
 
 p.setJointMotorControl2(neobotixschunkUid,9,p.POSITION_CONTROL,
-                       targetPosition=2.0,force=1000) #fz的方向为arm7旋转轴，因此arm6旋转时，会使重力在fz上的分力减小
+                       targetPosition=0.5,force=50) #fz的方向为arm7旋转轴，因此arm6旋转时，会使重力在fz上的分力减小
 # p.setJointMotorControl2(neobotixschunkUid,10,p.POSITION_CONTROL,
 #                        targetPosition=0,force=5)   #力是表示在child_link坐标系上的，因此随着旋转fx，fy会变化
 # p.setJointMotorControl2(neobotixschunkUid,9,p.POSITION_CONTROL,
@@ -104,26 +105,41 @@ for i in range(num_joint):
     link_state = p.getLinkState(neobotixschunkUid, i)
     print('links position:', link_state[0])
 
+pos_z = []
 
-for i in range(1000):
+for i in range(200):
     q = p.readUserDebugParameter(quitId)
     if q>0:
         break
     p.stepSimulation()
-    joint_observ.append_state()
+    base_pos = p.getBasePositionAndOrientation(neobotixschunkUid)[0]
+    pos_z.append(base_pos[2])
+    joint_observ7.append_state()
+    joint_observ9.append_state()
     time.sleep(1/240)
 
 p.setJointMotorControl2(neobotixschunkUid,9,p.POSITION_CONTROL,
-                       targetPosition=-2.0,force=1000)
-for i in range(1000):
+                       targetPosition=0,force=50)
+for i in range(200):
     q = p.readUserDebugParameter(quitId)
     if q>0:
         break
     p.stepSimulation()
-    joint_observ.append_state()
+    base_pos = p.getBasePositionAndOrientation(neobotixschunkUid)[0]
+    pos_z.append(base_pos[2])
+    joint_observ7.append_state()
+    joint_observ9.append_state()
     time.sleep(1/240)
 
 p.disconnect()
 
-joint_observ.plot()
+pos_z = np.array(pos_z)
+step = np.arange(0, len(pos_z), 1)
+plt.figure()
+plt.suptitle('z position of base')
+plt.plot(step, pos_z, 'r')
+plt.legend()
+
+joint_observ7.plot()
+joint_observ9.plot()
 plt.show()
