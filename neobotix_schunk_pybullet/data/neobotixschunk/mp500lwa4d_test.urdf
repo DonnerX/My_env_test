@@ -164,8 +164,8 @@
     <visual>
       <origin rpy="0 0 -1.16" xyz="0 0.012 -0.016"/>
       <geometry>
-        <sphere radius="0.125"/>
-        <!--<mesh filename="package://neobotix_schunk_pybullet/data/neobotixschunk/meshes/HANGER-WHEEL.STL" scale="0.01 0.01 0.01"/>-->
+        <!--<sphere radius="0.125"/>-->
+        <mesh filename="package://neobotix_schunk_pybullet/data/neobotixschunk/meshes/HANGER-WHEEL.STL" scale="0.01 0.01 0.01"/>-->
       </geometry>
       <material name="LightGrey"/>
     </visual>
@@ -369,6 +369,7 @@
     </collision>
   </link>
 
+
   <!--+++++++++ joint between arm_4_link and arm_5_link +++++++++-->
   <joint name="arm_5_joint" type="revolute">
     <origin rpy="1.57079632679 0 1.57079632679" xyz="0 0 0"/>
@@ -398,7 +399,7 @@
     </visual>
     <collision>
       <geometry>
-        <mesh filename="package://neobotix_schunk_pybullet/data/neobotixschunk/meshes/arm_5_link_collision.stl"/>
+        <mesh filename="package://neobotix_schunk_pybullet/data/neobotixschunk/meshes/arm_5_link_collision.stl" scale="0.8 0.8 0.8"/>
       </geometry>
     </collision>
   </link>
@@ -426,12 +427,14 @@
             -->
     <visual>
       <geometry>
-        <mesh filename="package://neobotix_schunk_pybullet/data/neobotixschunk/meshes/arm_6_link.stl"/>
+        <sphere radius="0.04"/>
+        <mesh filename="package://neobotix_schunk_pybullet/data/neobotixschunk/meshes/arm_6_link.stl" scale="0.9 0.9 0.9"/>
       </geometry>
       <material name="DarkGrey"/>
     </visual>
     <collision>
       <geometry>
+        <sphere radius="0.04"/>
         <mesh filename="package://neobotix_schunk_pybullet/data/neobotixschunk/meshes/arm_6_link_collision.stl" scale="0.9 0.9 0.9"/>
       </geometry>
     </collision>
@@ -466,7 +469,7 @@
     <collision>
       <origin xyz="0 0 0.005"/>
       <geometry>
-        <mesh filename="package://neobotix_schunk_pybullet/data/neobotixschunk/meshes/arm_7_link.stl" scale="0.9 0.9 0.9"/>
+        <mesh filename="package://neobotix_schunk_pybullet/data/neobotixschunk/meshes/arm_7_link.stl" scale="0.8 0.8 0.8"/>
       </geometry>
     </collision>
   </link>
@@ -528,6 +531,7 @@
       </geometry>
     </collision>
   </link>
+
 
   <!--++++++++++++ gripper_finger_left_joint +++++++++++++-->
   <joint name="gripper_finger_left_joint" type="fixed">
@@ -638,6 +642,11 @@
       </geometry>
     </collision>
   </link>
+
+
+
+
+
 
 
 

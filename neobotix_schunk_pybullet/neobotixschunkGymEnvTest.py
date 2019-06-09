@@ -118,7 +118,7 @@ def main():
         print(environment._p.getDynamicsInfo(Uid,i))
         link_state = environment._p.getLinkState(Uid,i)
         print(link_state[0])
-    joint_observ = joint(Uid,4)
+    joint_observ = joint(Uid,6)
 ####################
 
     while not done:

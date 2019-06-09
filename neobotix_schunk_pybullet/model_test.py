@@ -78,9 +78,24 @@ neobotixschunkUid = p.loadURDF(
     os.path.join(parentdir, "My_env_test/neobotix_schunk_pybullet/data/neobotixschunk/mp500lwa4d_test.urdf"),
     useFixedBase=False, flags=p.URDF_USE_SELF_COLLISION)
 
-joint_observ = joint(neobotixschunkUid, 6)
+joint_observ = joint(neobotixschunkUid, 17)
 
 quitId = p.addUserDebugParameter("quit", 0, 1, 0)
+
+p.setJointMotorControl2(neobotixschunkUid,9,p.POSITION_CONTROL,
+                       targetPosition=2.0,force=1000) #fz的方向为arm7旋转轴，因此arm6旋转时，会使重力在fz上的分力减小
+# p.setJointMotorControl2(neobotixschunkUid,10,p.POSITION_CONTROL,
+#                        targetPosition=0,force=5)   #力是表示在child_link坐标系上的，因此随着旋转fx，fy会变化
+# p.setJointMotorControl2(neobotixschunkUid,9,p.POSITION_CONTROL,
+#                        targetPosition=0,force=5)
+# p.setJointMotorControl2(neobotixschunkUid,8,p.POSITION_CONTROL,
+#                        targetPosition=0,force=5)
+# p.setJointMotorControl2(neobotixschunkUid,7,p.POSITION_CONTROL,
+#                        targetPosition=0,force=5)
+# p.setJointMotorControl2(neobotixschunkUid,6,p.POSITION_CONTROL,
+#                        targetPosition=0,force=5)
+# p.setJointMotorControl2(neobotixschunkUid,5,p.POSITION_CONTROL,
+#                        targetPosition=0,force=5)
 
 num_joint = p.getNumJoints(neobotixschunkUid)
 for i in range(num_joint):
@@ -90,7 +105,17 @@ for i in range(num_joint):
     print('links position:', link_state[0])
 
 
-while 1:
+for i in range(1000):
+    q = p.readUserDebugParameter(quitId)
+    if q>0:
+        break
+    p.stepSimulation()
+    joint_observ.append_state()
+    time.sleep(1/240)
+
+p.setJointMotorControl2(neobotixschunkUid,9,p.POSITION_CONTROL,
+                       targetPosition=-2.0,force=1000)
+for i in range(1000):
     q = p.readUserDebugParameter(quitId)
     if q>0:
         break

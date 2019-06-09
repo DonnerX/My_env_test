@@ -12,29 +12,40 @@
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/My_env_test$test.coverage" NAME="test Coverage Results" MODIFIED="1559645843080" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/neobotix_schunk_pybullet" />
     <SUITE FILE_PATH="coverage/My_env_test$p_test.coverage" NAME="p_test Coverage Results" MODIFIED="1559660095130" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/neobotix_schunk_pybullet" />
-    <SUITE FILE_PATH="coverage/My_env_test$model_test.coverage" NAME="model_test Coverage Results" MODIFIED="1559945648274" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/neobotix_schunk_pybullet" />
+    <SUITE FILE_PATH="coverage/My_env_test$model_test.coverage" NAME="model_test Coverage Results" MODIFIED="1560079991731" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/neobotix_schunk_pybullet" />
     <SUITE FILE_PATH="coverage/My_env_test$neobotixschunkGymEnvTest.coverage" NAME="neobotixschunkGymEnvTest Coverage Results" MODIFIED="1559204257991" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/neobotix_schunk_pybullet/env" />
-    <SUITE FILE_PATH="coverage/My_env_test$neobotixschunkGymEnvTest__1_.coverage" NAME="neobotixschunkGymEnvTest (1) Coverage Results" MODIFIED="1559940359274" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/neobotix_schunk_pybullet" />
+    <SUITE FILE_PATH="coverage/My_env_test$neobotixschunkGymEnvTest__1_.coverage" NAME="neobotixschunkGymEnvTest (1) Coverage Results" MODIFIED="1560080478893" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/neobotix_schunk_pybullet" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="neobotixschunkGymEnvTest.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="neobotixschunkGymEnvTest.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/neobotix_schunk_pybullet/neobotixschunkGymEnvTest.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="23">
-              <caret line="120" column="31" lean-forward="false" selection-start-line="120" selection-start-column="31" selection-end-line="120" selection-end-column="31" />
+            <state relative-caret-position="230">
+              <caret line="120" column="30" lean-forward="false" selection-start-line="120" selection-start-column="30" selection-end-line="120" selection-end-column="30" />
               <folding>
                 <element signature="e#264#273#0" expanded="true" />
+                <element signature="e#636#3114#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="model_test.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="neobotixschunk.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/neobotix_schunk_pybullet/env/neobotixschunk.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-713">
+              <caret line="31" column="26" lean-forward="false" selection-start-line="31" selection-start-column="26" selection-end-line="31" selection-end-column="26" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="model_test.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/neobotix_schunk_pybullet/model_test.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="350">
-              <caret line="80" column="41" lean-forward="false" selection-start-line="80" selection-start-column="41" selection-end-line="80" selection-end-column="41" />
+            <state relative-caret-position="1311">
+              <caret line="116" column="39" lean-forward="false" selection-start-line="116" selection-start-column="39" selection-end-line="116" selection-end-column="39" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
                 <element signature="e#135#2613#0" expanded="false" />
@@ -47,7 +58,7 @@
       <file leaf-file-name="p_test.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/neobotix_schunk_pybullet/p_test.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1242">
+            <state relative-caret-position="488">
               <caret line="58" column="45" lean-forward="false" selection-start-line="58" selection-start-column="45" selection-end-line="58" selection-end-column="45" />
               <folding />
             </state>
@@ -57,8 +68,8 @@
       <file leaf-file-name="temp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/neobotix_schunk_pybullet/data/neobotixschunk/meshes/temp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="488">
-              <caret line="590" column="10" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="590" selection-end-column="10" />
+            <state relative-caret-position="345">
+              <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -67,8 +78,8 @@
       <file leaf-file-name="mp500lwa4d_test.urdf" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/neobotix_schunk_pybullet/data/neobotixschunk/mp500lwa4d_test.urdf">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1541">
-              <caret line="644" column="0" lean-forward="false" selection-start-line="644" selection-start-column="0" selection-end-line="644" selection-end-column="0" />
+            <state relative-caret-position="1136">
+              <caret line="643" column="9" lean-forward="false" selection-start-line="643" selection-start-column="9" selection-end-line="643" selection-end-column="9" />
               <folding />
             </state>
           </provider>
@@ -77,8 +88,8 @@
       <file leaf-file-name="mp500lwa4d.urdf" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/neobotix_schunk_pybullet/data/neobotixschunk/mp500lwa4d.urdf">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="469">
-              <caret line="590" column="9" lean-forward="true" selection-start-line="564" selection-start-column="2" selection-end-line="590" selection-end-column="9" />
+            <state relative-caret-position="13570">
+              <caret line="590" column="9" lean-forward="false" selection-start-line="564" selection-start-column="2" selection-end-line="590" selection-end-column="9" />
               <folding />
             </state>
           </provider>
@@ -99,15 +110,15 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/neobotix_schunk_pybullet/env/neobotixschunk.py" />
         <option value="$PROJECT_DIR$/neobotix_schunk_pybullet/test.py" />
         <option value="$PROJECT_DIR$/neobotix_schunk_pybullet/p_test.py" />
-        <option value="$PROJECT_DIR$/neobotix_schunk_pybullet/neobotixschunkGymEnvTest.py" />
         <option value="$PROJECT_DIR$/neobotix_schunk_pybullet/env/neobotixschunkGymEnv.py" />
         <option value="$PROJECT_DIR$/neobotix_schunk_pybullet/data/neobotixschunk/mp500lwa4d.urdf" />
         <option value="$PROJECT_DIR$/neobotix_schunk_pybullet/data/neobotixschunk/meshes/temp" />
         <option value="$PROJECT_DIR$/neobotix_schunk_pybullet/data/neobotixschunk/mp500lwa4d_test.urdf" />
         <option value="$PROJECT_DIR$/neobotix_schunk_pybullet/model_test.py" />
+        <option value="$PROJECT_DIR$/neobotix_schunk_pybullet/env/neobotixschunk.py" />
+        <option value="$PROJECT_DIR$/neobotix_schunk_pybullet/neobotixschunkGymEnvTest.py" />
       </list>
     </option>
   </component>
@@ -137,7 +148,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -168,6 +178,7 @@
         </subPane>
       </pane>
       <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -187,7 +198,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.model_test">
+  <component name="RunManager" selected="Python.neobotixschunkGymEnvTest (1)">
     <configuration name="model_test" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -287,8 +298,8 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.model_test" />
-        <item index="1" class="java.lang.String" itemvalue="Python.neobotixschunkGymEnvTest (1)" />
+        <item index="0" class="java.lang.String" itemvalue="Python.neobotixschunkGymEnvTest (1)" />
+        <item index="1" class="java.lang.String" itemvalue="Python.model_test" />
         <item index="2" class="java.lang.String" itemvalue="Python.p_test" />
         <item index="3" class="java.lang.String" itemvalue="Python.test" />
         <item index="4" class="java.lang.String" itemvalue="Python.neobotixschunkGymEnvTest" />
@@ -314,7 +325,7 @@
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23015021" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.051502146" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -361,12 +372,41 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/neobotix_schunk_pybullet/data/neobotixschunk/mp500lwa4d_test.urdf">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="14812">
+          <caret line="644" column="0" lean-forward="false" selection-start-line="644" selection-start-column="0" selection-end-line="644" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/neobotix_schunk_pybullet/data/neobotixschunk/mp500lwa4d.urdf">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="13570">
+          <caret line="590" column="9" lean-forward="true" selection-start-line="564" selection-start-column="2" selection-end-line="590" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/neobotix_schunk_pybullet/model_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="483">
+          <caret line="80" column="41" lean-forward="false" selection-start-line="80" selection-start-column="41" selection-end-line="80" selection-end-column="41" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+            <element signature="e#135#2613#0" expanded="false" />
+            <element signature="e#1096#2613#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/neobotix_schunk_pybullet/neobotixschunkGymEnvTest.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2645">
           <caret line="120" column="31" lean-forward="false" selection-start-line="120" selection-start-column="31" selection-end-line="120" selection-end-column="31" />
           <folding>
             <element signature="e#264#273#0" expanded="true" />
+            <element signature="e#636#3114#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -421,6 +461,7 @@
           <caret line="120" column="31" lean-forward="false" selection-start-line="120" selection-start-column="31" selection-end-line="120" selection-end-column="31" />
           <folding>
             <element signature="e#264#273#0" expanded="true" />
+            <element signature="e#636#3114#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -465,6 +506,7 @@
           <caret line="120" column="30" lean-forward="false" selection-start-line="120" selection-start-column="30" selection-end-line="120" selection-end-column="30" />
           <folding>
             <element signature="e#264#273#0" expanded="true" />
+            <element signature="e#636#3114#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -500,6 +542,7 @@
           <caret line="120" column="30" lean-forward="false" selection-start-line="120" selection-start-column="30" selection-end-line="120" selection-end-column="30" />
           <folding>
             <element signature="e#264#273#0" expanded="true" />
+            <element signature="e#636#3114#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -528,6 +571,7 @@
           <caret line="120" column="30" lean-forward="false" selection-start-line="120" selection-start-column="30" selection-end-line="120" selection-end-column="30" />
           <folding>
             <element signature="e#264#273#0" expanded="true" />
+            <element signature="e#636#3114#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -563,6 +607,7 @@
           <caret line="120" column="30" lean-forward="false" selection-start-line="120" selection-start-column="30" selection-end-line="120" selection-end-column="30" />
           <folding>
             <element signature="e#264#273#0" expanded="true" />
+            <element signature="e#636#3114#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -598,6 +643,7 @@
           <caret line="120" column="30" lean-forward="false" selection-start-line="120" selection-start-column="30" selection-end-line="120" selection-end-column="30" />
           <folding>
             <element signature="e#264#273#0" expanded="true" />
+            <element signature="e#636#3114#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -626,6 +672,7 @@
           <caret line="54" column="23" lean-forward="false" selection-start-line="54" selection-start-column="23" selection-end-line="54" selection-end-column="23" />
           <folding>
             <element signature="e#264#273#0" expanded="true" />
+            <element signature="e#636#3114#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -668,6 +715,7 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#264#273#0" expanded="true" />
+            <element signature="e#636#3114#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -700,13 +748,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/neobotix_schunk_pybullet/env/neobotixschunk.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1495">
-          <caret line="68" column="12" lean-forward="false" selection-start-line="68" selection-start-column="11" selection-end-line="68" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/neobotix_schunk_pybullet/test.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="621">
@@ -714,18 +755,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/neobotix_schunk_pybullet/p_test.py">
+    <entry file="file://$PROJECT_DIR$/neobotix_schunk_pybullet/data/neobotixschunk/mp500lwa4d.urdf">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1242">
-          <caret line="58" column="45" lean-forward="false" selection-start-line="58" selection-start-column="45" selection-end-line="58" selection-end-column="45" />
+        <state relative-caret-position="13570">
+          <caret line="590" column="9" lean-forward="false" selection-start-line="564" selection-start-column="2" selection-end-line="590" selection-end-column="9" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/neobotix_schunk_pybullet/env/neobotixschunkGymEnv.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="776">
-          <caret line="300" column="5" lean-forward="false" selection-start-line="300" selection-start-column="5" selection-end-line="300" selection-end-column="5" />
+        <state relative-caret-position="375">
+          <caret line="22" column="25" lean-forward="false" selection-start-line="22" selection-start-column="25" selection-end-line="22" selection-end-column="25" />
           <folding>
             <element signature="e#2371#2576#0" expanded="false" />
             <element signature="e#2603#2663#0" expanded="false" />
@@ -733,48 +774,57 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/neobotix_schunk_pybullet/neobotixschunkGymEnvTest.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="23">
-          <caret line="120" column="31" lean-forward="false" selection-start-line="120" selection-start-column="31" selection-end-line="120" selection-end-column="31" />
-          <folding>
-            <element signature="e#264#273#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/neobotix_schunk_pybullet/data/neobotixschunk/mp500lwa4d.urdf">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="469">
-          <caret line="590" column="9" lean-forward="true" selection-start-line="564" selection-start-column="2" selection-end-line="590" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/neobotix_schunk_pybullet/data/neobotixschunk/meshes/temp">
+    <entry file="file://$PROJECT_DIR$/neobotix_schunk_pybullet/p_test.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="488">
-          <caret line="590" column="10" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="590" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/neobotix_schunk_pybullet/data/neobotixschunk/mp500lwa4d_test.urdf">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1541">
-          <caret line="644" column="0" lean-forward="false" selection-start-line="644" selection-start-column="0" selection-end-line="644" selection-end-column="0" />
+          <caret line="58" column="45" lean-forward="false" selection-start-line="58" selection-start-column="45" selection-end-line="58" selection-end-column="45" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/neobotix_schunk_pybullet/model_test.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="80" column="41" lean-forward="false" selection-start-line="80" selection-start-column="41" selection-end-line="80" selection-end-column="41" />
+        <state relative-caret-position="1311">
+          <caret line="116" column="39" lean-forward="false" selection-start-line="116" selection-start-column="39" selection-end-line="116" selection-end-column="39" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
             <element signature="e#135#2613#0" expanded="false" />
             <element signature="e#1096#2613#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/neobotix_schunk_pybullet/data/neobotixschunk/meshes/temp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/neobotix_schunk_pybullet/data/neobotixschunk/mp500lwa4d_test.urdf">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1136">
+          <caret line="643" column="9" lean-forward="false" selection-start-line="643" selection-start-column="9" selection-end-line="643" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/neobotix_schunk_pybullet/env/neobotixschunk.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-713">
+          <caret line="31" column="26" lean-forward="false" selection-start-line="31" selection-start-column="26" selection-end-line="31" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/neobotix_schunk_pybullet/neobotixschunkGymEnvTest.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="120" column="30" lean-forward="false" selection-start-line="120" selection-start-column="30" selection-end-line="120" selection-end-column="30" />
+          <folding>
+            <element signature="e#264#273#0" expanded="true" />
+            <element signature="e#636#3114#0" expanded="false" />
           </folding>
         </state>
       </provider>

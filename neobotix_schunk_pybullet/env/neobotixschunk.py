@@ -29,7 +29,7 @@ class NeobotixSchunk:
         self.urdfRootPath = urdfRootPath
         self.timeStep = timeStep
         self.maxVelocity = 1.5  # unused yet
-        self.maxForce = 1000
+        self.maxForce = 10
         self.useSimulation = 1  # unused yet
         self.useNullSpace = 0  # unused yet
         self.useOrientation = 1  # unused yet
@@ -49,7 +49,7 @@ class NeobotixSchunk:
         # self.neobotixschunkUid = None
         # load robot model
         self.neobotixschunkUid = p.loadURDF(
-            os.path.join(self.urdfRootPath, "neobotix_schunk_pybullet/data/neobotixschunk/mp500lwa4d.urdf"),
+            os.path.join(self.urdfRootPath, "neobotix_schunk_pybullet/data/neobotixschunk/mp500lwa4d_test.urdf"),
             useFixedBase=False, flags=p.URDF_USE_SELF_COLLISION)
         # print('uid', self.neobotixschunkUid)
         jointNameToId = {}
