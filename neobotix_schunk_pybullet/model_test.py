@@ -78,15 +78,15 @@ neobotixschunkUid = p.loadURDF(
     os.path.join(parentdir, "My_env_test/neobotix_schunk_pybullet/data/neobotixschunk/mp500lwa4d_test.urdf"),
     useFixedBase=False, flags=p.URDF_USE_SELF_COLLISION)
 
-joint_observ7 = joint(neobotixschunkUid, 7)
-joint_observ9 = joint(neobotixschunkUid, 9)
-
+joint_observ1 = joint(neobotixschunkUid, 7)
+joint_observ2 = joint(neobotixschunkUid, 9)
+#
 quitId = p.addUserDebugParameter("quit", 0, 1, 0)
-
+#
 p.setJointMotorControl2(neobotixschunkUid,9,p.POSITION_CONTROL,
-                       targetPosition=0.5,force=50) #fz的方向为arm7旋转轴，因此arm6旋转时，会使重力在fz上的分力减小
-# p.setJointMotorControl2(neobotixschunkUid,10,p.POSITION_CONTROL,
-#                        targetPosition=0,force=5)   #力是表示在child_link坐标系上的，因此随着旋转fx，fy会变化
+                       targetPosition=0,force=50) #fz的方向为arm7旋转轴，因此arm6旋转时，会使重力在fz上的分力减小
+# p.setJointMotorControl2(neobotixschunkUid,9,p.POSITION_CONTROL,
+#                        targetPosition=0,force=10)   #力是表示在child_link坐标系上的，因此随着旋转fx，fy会变化
 # p.setJointMotorControl2(neobotixschunkUid,9,p.POSITION_CONTROL,
 #                        targetPosition=0,force=5)
 # p.setJointMotorControl2(neobotixschunkUid,8,p.POSITION_CONTROL,
@@ -107,6 +107,14 @@ for i in range(num_joint):
 
 pos_z = []
 
+# while 1:
+#     q = p.readUserDebugParameter(quitId)
+#     if q>0:
+#         break
+#     p.stepSimulation()
+#     joint_observ1.append_state()
+#     time.sleep(1/240)
+
 for i in range(200):
     q = p.readUserDebugParameter(quitId)
     if q>0:
@@ -114,12 +122,12 @@ for i in range(200):
     p.stepSimulation()
     base_pos = p.getBasePositionAndOrientation(neobotixschunkUid)[0]
     pos_z.append(base_pos[2])
-    joint_observ7.append_state()
-    joint_observ9.append_state()
+    joint_observ1.append_state()
+    joint_observ2.append_state()
     time.sleep(1/240)
 
 p.setJointMotorControl2(neobotixschunkUid,9,p.POSITION_CONTROL,
-                       targetPosition=0,force=50)
+                       targetPosition=-0.5,force=50)
 for i in range(200):
     q = p.readUserDebugParameter(quitId)
     if q>0:
@@ -127,8 +135,8 @@ for i in range(200):
     p.stepSimulation()
     base_pos = p.getBasePositionAndOrientation(neobotixschunkUid)[0]
     pos_z.append(base_pos[2])
-    joint_observ7.append_state()
-    joint_observ9.append_state()
+    joint_observ1.append_state()
+    joint_observ2.append_state()
     time.sleep(1/240)
 
 p.disconnect()
@@ -140,6 +148,6 @@ plt.suptitle('z position of base')
 plt.plot(step, pos_z, 'r')
 plt.legend()
 
-joint_observ7.plot()
-joint_observ9.plot()
+joint_observ1.plot()
+joint_observ2.plot()
 plt.show()
